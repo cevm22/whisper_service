@@ -21,11 +21,13 @@ def read_item(item_id: int, q: Union[str, None] = None):
 def translate_file(filename: str):
     # PENDING TO ADD FUNCTION TO TRANSLATION
     # 1 - Get the full path of the .wav or .ogg file
-    # 2 - Ask for transcription with test.lets_transcribe(file_path, file_format)
+    bucket_path = '/app/bucket/'
+    file_path = str(bucket_path) + str(filename) 
+    # 2 - Ask for transcription with test.lets_transcribe(file_path, "txt")
     # 3 - Return the transcription
     
     
     # Translate the content
     translated_text = "DUMMY TEXT"
 
-    return {"filename": filename, "transcription": translated_text}
+    return {"filename": filename, "transcription": translated_text, "filepath":file_path}
