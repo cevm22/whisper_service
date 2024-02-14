@@ -5,7 +5,7 @@ services:
     image: fastwhisper_service
     volumes:
       - /home/ubuntu/projects/bucket:/app/bucket
-      - /home/ubuntu/projects/testfield/testWhisper:/app
+      - /home/ubuntu/projects/whisper_service:/app
     ports:
       - "1234:1234"
     networks:
