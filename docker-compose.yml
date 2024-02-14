@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  testWhisper:
-    image: test_whisper
+  fastwhisper_service:
+    image: fastwhisper
     volumes:
       - /home/ubuntu/projects/bucket:/app/bucket
       - /home/ubuntu/projects/testfield/testWhisper:/app
