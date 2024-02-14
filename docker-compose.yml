@@ -4,6 +4,7 @@ services:
   testWhisper:
     image: test_whisper
     volumes:
+      - /home/ubuntu/projects/bucket:/app/bucket
       - /home/ubuntu/projects/testfield/testWhisper:/app
     ports:
       - "1234:1234"
