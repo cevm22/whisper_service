@@ -648,5 +648,6 @@ def lets_transcribe(file_path, file_format):
 
   # Print or handle the result as needed
   print(result)
+  return result
 
 #lets_transcribe('./222.wav','txt')

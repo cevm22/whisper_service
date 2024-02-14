@@ -24,10 +24,11 @@ def translate_file(filename: str):
     bucket_path = '/app/bucket/'
     file_path = str(bucket_path) + str(filename) 
     # 2 - Ask for transcription with test.lets_transcribe(file_path, "txt")
+    res = test.lets_transcribe(file_path, "txt")
     # 3 - Return the transcription
     
     
     # Translate the content
     translated_text = "DUMMY TEXT"
 
-    return {"filename": filename, "transcription": translated_text, "filepath":file_path}
+    return {"filename": filename, "transcription": res, "filepath":file_path}
