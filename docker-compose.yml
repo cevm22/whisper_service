@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  testWhisper:
+    image: test_whisper
+    volumes:
+      - /home/ubuntu/projects/testfield/testWhisper:/app
+    ports:
+      - "1234:1234"
+    networks:
+      - mynetwork
+    # Command to keep the container running indefinitely
+    command: ["sleep", "infinity"]
+
+networks:
+  mynetwork:
+    external: true
+
