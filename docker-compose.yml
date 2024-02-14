@@ -10,8 +10,9 @@ services:
       - "1234:1234"
     networks:
       - mynetwork
+    working_dir: /app
     # Command to keep the container running indefinitely
-    command: ["sleep", "infinity"]
+    command: ["uvicorn", "fast:app", "--host", "0.0.0.0", "--port", "1234"] 
 
 networks:
   mynetwork:
